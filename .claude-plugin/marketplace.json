@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "quietmachineworks",
+  "description": "Small, opinionated tools for solo developers shipping real projects.",
+  "owner": {
+    "name": "Bruno Bellenoue",
+    "url": "https://github.com/quietmachineworks"
+  },
+  "plugins": [
+    {
+      "name": "ratchet",
+      "description": "Report which of a project's stated code rules are enforced, and build the checks that enforce the rest.",
+      "source": {
+        "source": "github",
+        "repo": "quietmachineworks/ratchet"
+      },
+      "homepage": "https://github.com/quietmachineworks/ratchet"
+    },
+    {
+      "name": "shakedown",
+      "description": "Play a real user through a product's UI, screen by screen, on a genuinely empty environment, until every screen in scope survives contact with reality.",
+      "source": {
+        "source": "github",
+        "repo": "quietmachineworks/shakedown"
+      },
+      "homepage": "https://github.com/quietmachineworks/shakedown"
+    }
+  ]
+}
