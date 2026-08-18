@@ -1,0 +1,41 @@
+{
+  "name": "@quietmachineworks/qmw",
+  "version": "0.1.0",
+  "description": "Small, opinionated tools for solo developers shipping real projects.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Bruno Bellenoue",
+  "homepage": "https://github.com/quietmachineworks/qmw",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quietmachineworks/qmw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/quietmachineworks/qmw/issues"
+  },
+  "keywords": [
+    "ci",
+    "code-quality",
+    "technical-debt",
+    "conventions",
+    "qa",
+    "user-acceptance",
+    "e2e",
+    "agent-skill",
+    "claude-code"
+  ],
+  "bin": {
+    "ratchet": "skills/ratchet-add/scripts/ratchet.mjs"
+  },
+  "files": [
+    "skills/",
+    "examples/",
+    ".claude-plugin/"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test/run.mjs"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "qmw",
+  "description": "Small, opinionated tools for solo developers shipping real projects: freeze the code rules a project never enforced, and play a real user through its UI before real users do.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Bruno Bellenoue"
+  },
+  "homepage": "https://github.com/quietmachineworks/qmw",
+  "license": "MIT",
+  "keywords": [
+    "ci",
+    "code-quality",
+    "technical-debt",
+    "conventions",
+    "linting",
+    "qa",
+    "user-acceptance",
+    "e2e",
+    "playwright",
+    "manual-testing"
+  ]
+}

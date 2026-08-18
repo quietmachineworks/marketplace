@@ -8,24 +8,11 @@
   },
   "plugins": [
     {
-      "name": "ratchet",
-      "description": "Report which of a project's stated code rules are enforced, and build the checks that enforce the rest.",
+      "name": "qmw",
+      "description": "Small, opinionated tools for solo developers shipping real projects: freeze the code rules a project never enforced, and play a real user through its UI before real users do.",
       "category": "development",
-      "source": {
-        "source": "github",
-        "repo": "quietmachineworks/ratchet"
-      },
-      "homepage": "https://github.com/quietmachineworks/ratchet"
-    },
-    {
-      "name": "shakedown",
-      "description": "Play a real user through a product's UI, screen by screen, on a genuinely empty environment, until every screen in scope survives contact with reality.",
-      "category": "testing",
-      "source": {
-        "source": "github",
-        "repo": "quietmachineworks/shakedown"
-      },
-      "homepage": "https://github.com/quietmachineworks/shakedown"
+      "source": "./",
+      "homepage": "https://github.com/quietmachineworks/qmw"
     }
   ]
 }
