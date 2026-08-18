@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # This file is the install path for every tool listed in it. A syntax
+      # error here fails at `/plugin marketplace add`, on someone else's
+      # machine, with no signal in this repository.
+      - name: Index parses, and every entry carries what the browser shows
+        run: |
+          node -e "
+            const m = JSON.parse(require('fs').readFileSync('.claude-plugin/marketplace.json','utf8'));
+            for (const p of m.plugins) {
+              for (const field of ['name','description','category','source','homepage']) {
+                if (!p[field]) { console.error(p.name + ': missing ' + field); process.exit(1); }
+              }
+            }
+            console.log(m.plugins.length + ' entries OK');
+          "
+      # A README that lists one set of tools and an index that ships another is
+      # how a tool ends up installable but undiscoverable, or the reverse.
+      - name: README lists every indexed tool
+        run: |
+          node -e "
+            const fs = require('fs');
+            const m = JSON.parse(fs.readFileSync('.claude-plugin/marketplace.json','utf8'));
+            const readme = fs.readFileSync('README.md','utf8');
+            for (const p of m.plugins) {
+              if (!readme.includes('[' + p.name + ']')) {
+                console.error(p.name + ': indexed but not linked from README.md'); process.exit(1);
+              }
+            }
+          "

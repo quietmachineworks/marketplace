@@ -10,6 +10,7 @@
     {
       "name": "ratchet",
       "description": "Report which of a project's stated code rules are enforced, and build the checks that enforce the rest.",
+      "category": "development",
       "source": {
         "source": "github",
         "repo": "quietmachineworks/ratchet"
@@ -19,6 +20,7 @@
     {
       "name": "shakedown",
       "description": "Play a real user through a product's UI, screen by screen, on a genuinely empty environment, until every screen in scope survives contact with reality.",
+      "category": "testing",
       "source": {
         "source": "github",
         "repo": "quietmachineworks/shakedown"
